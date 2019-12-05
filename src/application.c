@@ -27,6 +27,8 @@
 
 #include <string.h>
 
+void test_ciphering(void);
+
 static app_state_t app_state = APP_INITIALISE;
 static uint8_t app_buttons = 0;
 
@@ -97,10 +99,44 @@ static uint8_t ble_adv[31];
 static uint8_t ble_adv_length;
 static uint8_t ble_mess_count;
 
+
+
+/**
+ * @test ciphering
+ *
+ *
+ */
+
+void test_ciphering(void)
+{
+	printf("cipher test |n");
+	/* uint8_t MESSAGE_TEST[] = "CECI EST UN TEST DE CHIFFREMENT \0";
+	 uint8_t KEY_TEST[] = {0x0A, 0x1B, 0xFE, 0xDE, 0xFD, 0xAB, 0xB1, 0x04};
+
+	 printf("taille du message  : %d \n",sizeof(MESSAGE_TEST));
+	 printf("taille de la clef  : %d \n",sizeof(KEY_TEST));
+
+	 printf("message initial : %s \n",MESSAGE_TEST);
+
+	 encrypt_message(&KEY_TEST,sizeof(KEY_TEST),&MESSAGE_TEST,sizeof(MESSAGE_TEST));
+
+	 printf("message chiffrer : %s \n",MESSAGE_TEST);
+
+	 decrypt_message(&KEY_TEST,sizeof(KEY_TEST),&MESSAGE_TEST,sizeof(MESSAGE_TEST));
+
+	 printf("message dechiffrer : %s \n",MESSAGE_TEST);*/
+
+}
+
+
+
+
+
 app_error_t app_initialise_hardware(void)
 {
 	app_error_t ret = APP_NO_ERROR;
 	ret_code_t errcode;
+	//printf("int !! \n");
 
 	// Initialise the log system used by the drivers to report errors and warnings
     errcode = NRF_LOG_INIT(NULL);
@@ -245,6 +281,7 @@ app_error_t app_update(uint8_t *end)
 			ble_mess_count = 0;
 
 			// Go to the next state
+			test_ciphering();
 			app_state = APP_RUNNING;
 			break;
 
@@ -295,7 +332,7 @@ app_error_t app_update(uint8_t *end)
 				}
 				// wait the softdevice
 				sd_app_evt_wait();
-
+		break;
 
 		default:
 			break;
@@ -473,7 +510,7 @@ void app_display_info(void)
     	printf("Error returned by sd_ble_gap_address_get(): %lu\n", err);
 	} else
 	{
-		printf("Local BLE address is ");
+		printf("Local BLE test address is ");
 		for(i = sizeof(addr.addr) / sizeof(addr.addr[0]); i > 0; i--)
 		{
 			printf((i > 1) ? "%.2x:" : "%.2x", addr.addr[i - 1]);
@@ -504,7 +541,7 @@ int8_t app_create_ble_adv(const uint8_t *adv_src, uint8_t adv_src_length, const 
 		ret = size;
 
 		// Encrypt the data
-		encrypt_message(KEY, sizeof(KEY), &ble_adv[adv_src_length + 2], size);
+		//encrypt_message(KEY, sizeof(KEY), &ble_adv[adv_src_length + 2], size);
 	}
 
 	// Set the size ready to be sent

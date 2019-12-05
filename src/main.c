@@ -14,8 +14,17 @@
 
 #include "application.h"
 
+
+
+
+
+
+
+
 /**
  * @brief Point d'entrée principal de l'application.
+ *
+ *
  */
 int main(void)
 {
