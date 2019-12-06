@@ -109,7 +109,7 @@ static uint8_t ble_mess_count;
 
 void test_ciphering(void)
 {
-	printf("cipher test |n");
+	printf("cipher test 1 \n");
 	/* uint8_t MESSAGE_TEST[] = "CECI EST UN TEST DE CHIFFREMENT \0";
 	 uint8_t KEY_TEST[] = {0x0A, 0x1B, 0xFE, 0xDE, 0xFD, 0xAB, 0xB1, 0x04};
 
@@ -160,7 +160,7 @@ app_error_t app_initialise_hardware(void)
 
 
     // Configure LED-pins as outputs and turn them off
-   	   LEDS_CONFIGURE(LEDS_MASK); // configure leds tris
+   	  // LEDS_CONFIGURE(LEDS_MASK); // configure leds tris
    	   bsp_board_leds_off(); // shut down all the onboard leds
 
 
@@ -264,8 +264,7 @@ app_error_t app_update(uint8_t *end)
 	switch(app_state)
 	{
 		case APP_INITIALISE:
-			// Initialise the hardware required by the application
-			bsp_board_leds_off();  // force onboard leds off
+
 
 			ret = app_initialise_hardware();
 			if(ret != APP_NO_ERROR)
@@ -300,13 +299,15 @@ app_error_t app_update(uint8_t *end)
 			break;
 
 		case APP_RUNNING:
-			LEDS_OFF(BSP_LED_0_MASK); // turn off onboard led0
 			if(app_buttons & APP_BUTTON1_PRESSED)
 				{
 					app_buttons &= ~APP_BUTTON1_PRESSED; //Reset BP state 1
 					app_state=APP_SCANNING;
+					app_scan_stop();
 					app_scan_start();// scan for ble devices
 					printf("state : Scanning....\n");
+
+					LEDS_ON(BSP_LED_0_MASK); // turn on onboard led0
 				}
 
 				if(app_buttons & APP_BUTTON2_PRESSED)
@@ -321,7 +322,6 @@ app_error_t app_update(uint8_t *end)
 			break;
 
 		case APP_SCANNING:
-				LEDS_ON(BSP_LED_0_MASK); // turn on onboard led0
 				if(app_buttons & APP_BUTTON1_PRESSED)
 				{
 					app_buttons &= ~APP_BUTTON1_PRESSED; //Reset l'appui du bouton
@@ -329,7 +329,10 @@ app_error_t app_update(uint8_t *end)
 					app_scan_stop();
 					printf("stop scan");
 					printf("State :  Running\n");
+
+					LEDS_OFF(BSP_LED_0_MASK); // turn off onboard led0
 				}
+
 				// wait the softdevice
 				sd_app_evt_wait();
 		break;
