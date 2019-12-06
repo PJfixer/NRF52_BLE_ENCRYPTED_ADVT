@@ -4548,7 +4548,7 @@ RAM              0x200020e0         0x0000df20         xrw
 Linker script and memory map
 
 
-.text           0x00023000    0x14168
+.text           0x00023000    0x1434c
  *(.isr_vector)
  .isr_vector    0x00023000      0x200 ./src/nrf5-sdk/toolchain/gcc/gcc_startup_nrf52.o
                 0x00023000                __isr_vector
@@ -9076,442 +9076,442 @@ Linker script and memory map
  .text.sd_softdevice_vector_table_base_set
                 0x000339fc        0x8 ./src/application.o
  .text.test_ciphering
-                0x00033a04       0x14 ./src/application.o
+                0x00033a04      0x13c ./src/application.o
                 0x00033a04                test_ciphering
  .text.app_initialise_hardware
-                0x00033a18      0x120 ./src/application.o
-                0x00033a18                app_initialise_hardware
+                0x00033b40      0x120 ./src/application.o
+                0x00033b40                app_initialise_hardware
  .text.app_uninitialise_hardware
-                0x00033b38       0x28 ./src/application.o
-                0x00033b38                app_uninitialise_hardware
+                0x00033c60       0x28 ./src/application.o
+                0x00033c60                app_uninitialise_hardware
  .text.app_update
-                0x00033b60      0x18c ./src/application.o
-                0x00033b60                app_update
+                0x00033c88      0x18c ./src/application.o
+                0x00033c88                app_update
  .text.app_scan_start
-                0x00033cec       0x28 ./src/application.o
-                0x00033cec                app_scan_start
+                0x00033e14       0x28 ./src/application.o
+                0x00033e14                app_scan_start
  .text.app_scan_stop
-                0x00033d14       0x18 ./src/application.o
-                0x00033d14                app_scan_stop
+                0x00033e3c       0x18 ./src/application.o
+                0x00033e3c                app_scan_stop
  .text.app_event_handler
-                0x00033d2c       0xa8 ./src/application.o
-                0x00033d2c                app_event_handler
+                0x00033e54       0xa8 ./src/application.o
+                0x00033e54                app_event_handler
  .text.assert_nrf_callback
-                0x00033dd4       0x24 ./src/application.o
-                0x00033dd4                assert_nrf_callback
+                0x00033efc       0x24 ./src/application.o
+                0x00033efc                assert_nrf_callback
  .text.app_ble_event_handler
-                0x00033df8      0x1d0 ./src/application.o
-                0x00033df8                app_ble_event_handler
+                0x00033f20      0x1d0 ./src/application.o
+                0x00033f20                app_ble_event_handler
  .text.app_display_info
-                0x00033fc8       0x7c ./src/application.o
-                0x00033fc8                app_display_info
+                0x000340f0       0x7c ./src/application.o
+                0x000340f0                app_display_info
  .text.app_create_ble_adv
-                0x00034044       0xa4 ./src/application.o
-                0x00034044                app_create_ble_adv
- .text          0x000340e8        0x0 ./src/encryption.o
+                0x0003416c       0xbc ./src/application.o
+                0x0003416c                app_create_ble_adv
+ .text          0x00034228        0x0 ./src/encryption.o
  .text.encrypt_message
-                0x000340e8       0x70 ./src/encryption.o
-                0x000340e8                encrypt_message
+                0x00034228       0x70 ./src/encryption.o
+                0x00034228                encrypt_message
  .text.decrypt_message
-                0x00034158       0x2c ./src/encryption.o
-                0x00034158                decrypt_message
- .text          0x00034184        0x0 ./src/main.o
+                0x00034298       0x2c ./src/encryption.o
+                0x00034298                decrypt_message
+ .text          0x000342c4        0x0 ./src/main.o
  .text.sd_ble_gap_addr_set
-                0x00034184        0x8 ./src/main.o
- .text.sd_ble_gap_addr_get
-                0x0003418c        0x8 ./src/main.o
- .text.sd_ble_gap_whitelist_set
-                0x00034194        0x8 ./src/main.o
- .text.sd_ble_gap_device_identities_set
-                0x0003419c        0x8 ./src/main.o
- .text.sd_ble_gap_privacy_set
-                0x000341a4        0x8 ./src/main.o
- .text.sd_ble_gap_privacy_get
-                0x000341ac        0x8 ./src/main.o
- .text.sd_ble_gap_adv_data_set
-                0x000341b4        0x8 ./src/main.o
- .text.sd_ble_gap_adv_start
-                0x000341bc        0x8 ./src/main.o
- .text.sd_ble_gap_adv_stop
-                0x000341c4        0x8 ./src/main.o
- .text.sd_ble_gap_conn_param_update
-                0x000341cc        0x8 ./src/main.o
- .text.sd_ble_gap_disconnect
-                0x000341d4        0x8 ./src/main.o
- .text.sd_ble_gap_tx_power_set
-                0x000341dc        0x8 ./src/main.o
- .text.sd_ble_gap_appearance_set
-                0x000341e4        0x8 ./src/main.o
- .text.sd_ble_gap_appearance_get
-                0x000341ec        0x8 ./src/main.o
- .text.sd_ble_gap_ppcp_set
-                0x000341f4        0x8 ./src/main.o
- .text.sd_ble_gap_ppcp_get
-                0x000341fc        0x8 ./src/main.o
- .text.sd_ble_gap_device_name_set
-                0x00034204        0x8 ./src/main.o
- .text.sd_ble_gap_device_name_get
-                0x0003420c        0x8 ./src/main.o
- .text.sd_ble_gap_authenticate
-                0x00034214        0x8 ./src/main.o
- .text.sd_ble_gap_sec_params_reply
-                0x0003421c        0x8 ./src/main.o
- .text.sd_ble_gap_auth_key_reply
-                0x00034224        0x8 ./src/main.o
- .text.sd_ble_gap_lesc_dhkey_reply
-                0x0003422c        0x8 ./src/main.o
- .text.sd_ble_gap_keypress_notify
-                0x00034234        0x8 ./src/main.o
- .text.sd_ble_gap_lesc_oob_data_get
-                0x0003423c        0x8 ./src/main.o
- .text.sd_ble_gap_lesc_oob_data_set
-                0x00034244        0x8 ./src/main.o
- .text.sd_ble_gap_encrypt
-                0x0003424c        0x8 ./src/main.o
- .text.sd_ble_gap_sec_info_reply
-                0x00034254        0x8 ./src/main.o
- .text.sd_ble_gap_conn_sec_get
-                0x0003425c        0x8 ./src/main.o
- .text.sd_ble_gap_rssi_start
-                0x00034264        0x8 ./src/main.o
- .text.sd_ble_gap_rssi_stop
-                0x0003426c        0x8 ./src/main.o
- .text.sd_ble_gap_rssi_get
-                0x00034274        0x8 ./src/main.o
- .text.sd_ble_gap_scan_start
-                0x0003427c        0x8 ./src/main.o
- .text.sd_ble_gap_scan_stop
-                0x00034284        0x8 ./src/main.o
- .text.sd_ble_gap_connect
-                0x0003428c        0x8 ./src/main.o
- .text.sd_ble_gap_connect_cancel
-                0x00034294        0x8 ./src/main.o
- .text.sd_ble_gap_phy_update
-                0x0003429c        0x8 ./src/main.o
- .text.sd_ble_gap_data_length_update
-                0x000342a4        0x8 ./src/main.o
- .text.sd_ble_l2cap_ch_setup
-                0x000342ac        0x8 ./src/main.o
- .text.sd_ble_l2cap_ch_release
-                0x000342b4        0x8 ./src/main.o
- .text.sd_ble_l2cap_ch_rx
-                0x000342bc        0x8 ./src/main.o
- .text.sd_ble_l2cap_ch_tx
                 0x000342c4        0x8 ./src/main.o
- .text.sd_ble_l2cap_ch_flow_control
+ .text.sd_ble_gap_addr_get
                 0x000342cc        0x8 ./src/main.o
- .text.sd_ble_gattc_primary_services_discover
+ .text.sd_ble_gap_whitelist_set
                 0x000342d4        0x8 ./src/main.o
- .text.sd_ble_gattc_relationships_discover
+ .text.sd_ble_gap_device_identities_set
                 0x000342dc        0x8 ./src/main.o
- .text.sd_ble_gattc_characteristics_discover
+ .text.sd_ble_gap_privacy_set
                 0x000342e4        0x8 ./src/main.o
- .text.sd_ble_gattc_descriptors_discover
+ .text.sd_ble_gap_privacy_get
                 0x000342ec        0x8 ./src/main.o
- .text.sd_ble_gattc_char_value_by_uuid_read
+ .text.sd_ble_gap_adv_data_set
                 0x000342f4        0x8 ./src/main.o
- .text.sd_ble_gattc_read
+ .text.sd_ble_gap_adv_start
                 0x000342fc        0x8 ./src/main.o
- .text.sd_ble_gattc_char_values_read
+ .text.sd_ble_gap_adv_stop
                 0x00034304        0x8 ./src/main.o
- .text.sd_ble_gattc_write
+ .text.sd_ble_gap_conn_param_update
                 0x0003430c        0x8 ./src/main.o
- .text.sd_ble_gattc_hv_confirm
+ .text.sd_ble_gap_disconnect
                 0x00034314        0x8 ./src/main.o
- .text.sd_ble_gattc_attr_info_discover
+ .text.sd_ble_gap_tx_power_set
                 0x0003431c        0x8 ./src/main.o
- .text.sd_ble_gattc_exchange_mtu_request
+ .text.sd_ble_gap_appearance_set
                 0x00034324        0x8 ./src/main.o
- .text.sd_ble_gatts_service_add
+ .text.sd_ble_gap_appearance_get
                 0x0003432c        0x8 ./src/main.o
- .text.sd_ble_gatts_include_add
+ .text.sd_ble_gap_ppcp_set
                 0x00034334        0x8 ./src/main.o
- .text.sd_ble_gatts_characteristic_add
+ .text.sd_ble_gap_ppcp_get
                 0x0003433c        0x8 ./src/main.o
- .text.sd_ble_gatts_descriptor_add
+ .text.sd_ble_gap_device_name_set
                 0x00034344        0x8 ./src/main.o
- .text.sd_ble_gatts_value_set
+ .text.sd_ble_gap_device_name_get
                 0x0003434c        0x8 ./src/main.o
- .text.sd_ble_gatts_value_get
+ .text.sd_ble_gap_authenticate
                 0x00034354        0x8 ./src/main.o
- .text.sd_ble_gatts_hvx
+ .text.sd_ble_gap_sec_params_reply
                 0x0003435c        0x8 ./src/main.o
- .text.sd_ble_gatts_service_changed
+ .text.sd_ble_gap_auth_key_reply
                 0x00034364        0x8 ./src/main.o
- .text.sd_ble_gatts_rw_authorize_reply
+ .text.sd_ble_gap_lesc_dhkey_reply
                 0x0003436c        0x8 ./src/main.o
- .text.sd_ble_gatts_sys_attr_set
+ .text.sd_ble_gap_keypress_notify
                 0x00034374        0x8 ./src/main.o
- .text.sd_ble_gatts_sys_attr_get
+ .text.sd_ble_gap_lesc_oob_data_get
                 0x0003437c        0x8 ./src/main.o
- .text.sd_ble_gatts_initial_user_handle_get
+ .text.sd_ble_gap_lesc_oob_data_set
                 0x00034384        0x8 ./src/main.o
- .text.sd_ble_gatts_attr_get
+ .text.sd_ble_gap_encrypt
                 0x0003438c        0x8 ./src/main.o
- .text.sd_ble_gatts_exchange_mtu_reply
+ .text.sd_ble_gap_sec_info_reply
                 0x00034394        0x8 ./src/main.o
- .text.sd_ble_enable
+ .text.sd_ble_gap_conn_sec_get
                 0x0003439c        0x8 ./src/main.o
- .text.sd_ble_cfg_set
+ .text.sd_ble_gap_rssi_start
                 0x000343a4        0x8 ./src/main.o
- .text.sd_ble_evt_get
+ .text.sd_ble_gap_rssi_stop
                 0x000343ac        0x8 ./src/main.o
- .text.sd_ble_uuid_vs_add
+ .text.sd_ble_gap_rssi_get
                 0x000343b4        0x8 ./src/main.o
- .text.sd_ble_uuid_decode
+ .text.sd_ble_gap_scan_start
                 0x000343bc        0x8 ./src/main.o
- .text.sd_ble_uuid_encode
+ .text.sd_ble_gap_scan_stop
                 0x000343c4        0x8 ./src/main.o
- .text.sd_ble_version_get
+ .text.sd_ble_gap_connect
                 0x000343cc        0x8 ./src/main.o
- .text.sd_ble_user_mem_reply
+ .text.sd_ble_gap_connect_cancel
                 0x000343d4        0x8 ./src/main.o
- .text.sd_ble_opt_set
+ .text.sd_ble_gap_phy_update
                 0x000343dc        0x8 ./src/main.o
- .text.sd_ble_opt_get
+ .text.sd_ble_gap_data_length_update
                 0x000343e4        0x8 ./src/main.o
- .text.main     0x000343ec       0x48 ./src/main.o
-                0x000343ec                main
- .text          0x00034434       0x30 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_aeabi_uldivmod.o)
-                0x00034434                __aeabi_uldivmod
- .text          0x00034464      0x2e4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
-                0x00034464                __udivmoddi4
- .text          0x00034748        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_dvmd_tls.o)
-                0x00034748                __aeabi_idiv0
-                0x00034748                __aeabi_ldiv0
- .text          0x0003474c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-ctype_.o)
- .text          0x0003474c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-exit.o)
- .text.exit     0x0003474c       0x28 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-exit.o)
-                0x0003474c                exit
- .text          0x00034774        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-impure.o)
- .text          0x00034774        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-init.o)
+ .text.sd_ble_l2cap_ch_setup
+                0x000343ec        0x8 ./src/main.o
+ .text.sd_ble_l2cap_ch_release
+                0x000343f4        0x8 ./src/main.o
+ .text.sd_ble_l2cap_ch_rx
+                0x000343fc        0x8 ./src/main.o
+ .text.sd_ble_l2cap_ch_tx
+                0x00034404        0x8 ./src/main.o
+ .text.sd_ble_l2cap_ch_flow_control
+                0x0003440c        0x8 ./src/main.o
+ .text.sd_ble_gattc_primary_services_discover
+                0x00034414        0x8 ./src/main.o
+ .text.sd_ble_gattc_relationships_discover
+                0x0003441c        0x8 ./src/main.o
+ .text.sd_ble_gattc_characteristics_discover
+                0x00034424        0x8 ./src/main.o
+ .text.sd_ble_gattc_descriptors_discover
+                0x0003442c        0x8 ./src/main.o
+ .text.sd_ble_gattc_char_value_by_uuid_read
+                0x00034434        0x8 ./src/main.o
+ .text.sd_ble_gattc_read
+                0x0003443c        0x8 ./src/main.o
+ .text.sd_ble_gattc_char_values_read
+                0x00034444        0x8 ./src/main.o
+ .text.sd_ble_gattc_write
+                0x0003444c        0x8 ./src/main.o
+ .text.sd_ble_gattc_hv_confirm
+                0x00034454        0x8 ./src/main.o
+ .text.sd_ble_gattc_attr_info_discover
+                0x0003445c        0x8 ./src/main.o
+ .text.sd_ble_gattc_exchange_mtu_request
+                0x00034464        0x8 ./src/main.o
+ .text.sd_ble_gatts_service_add
+                0x0003446c        0x8 ./src/main.o
+ .text.sd_ble_gatts_include_add
+                0x00034474        0x8 ./src/main.o
+ .text.sd_ble_gatts_characteristic_add
+                0x0003447c        0x8 ./src/main.o
+ .text.sd_ble_gatts_descriptor_add
+                0x00034484        0x8 ./src/main.o
+ .text.sd_ble_gatts_value_set
+                0x0003448c        0x8 ./src/main.o
+ .text.sd_ble_gatts_value_get
+                0x00034494        0x8 ./src/main.o
+ .text.sd_ble_gatts_hvx
+                0x0003449c        0x8 ./src/main.o
+ .text.sd_ble_gatts_service_changed
+                0x000344a4        0x8 ./src/main.o
+ .text.sd_ble_gatts_rw_authorize_reply
+                0x000344ac        0x8 ./src/main.o
+ .text.sd_ble_gatts_sys_attr_set
+                0x000344b4        0x8 ./src/main.o
+ .text.sd_ble_gatts_sys_attr_get
+                0x000344bc        0x8 ./src/main.o
+ .text.sd_ble_gatts_initial_user_handle_get
+                0x000344c4        0x8 ./src/main.o
+ .text.sd_ble_gatts_attr_get
+                0x000344cc        0x8 ./src/main.o
+ .text.sd_ble_gatts_exchange_mtu_reply
+                0x000344d4        0x8 ./src/main.o
+ .text.sd_ble_enable
+                0x000344dc        0x8 ./src/main.o
+ .text.sd_ble_cfg_set
+                0x000344e4        0x8 ./src/main.o
+ .text.sd_ble_evt_get
+                0x000344ec        0x8 ./src/main.o
+ .text.sd_ble_uuid_vs_add
+                0x000344f4        0x8 ./src/main.o
+ .text.sd_ble_uuid_decode
+                0x000344fc        0x8 ./src/main.o
+ .text.sd_ble_uuid_encode
+                0x00034504        0x8 ./src/main.o
+ .text.sd_ble_version_get
+                0x0003450c        0x8 ./src/main.o
+ .text.sd_ble_user_mem_reply
+                0x00034514        0x8 ./src/main.o
+ .text.sd_ble_opt_set
+                0x0003451c        0x8 ./src/main.o
+ .text.sd_ble_opt_get
+                0x00034524        0x8 ./src/main.o
+ .text.main     0x0003452c       0x48 ./src/main.o
+                0x0003452c                main
+ .text          0x00034574       0x30 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_aeabi_uldivmod.o)
+                0x00034574                __aeabi_uldivmod
+ .text          0x000345a4      0x2e4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
+                0x000345a4                __udivmoddi4
+ .text          0x00034888        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_dvmd_tls.o)
+                0x00034888                __aeabi_idiv0
+                0x00034888                __aeabi_ldiv0
+ .text          0x0003488c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-ctype_.o)
+ .text          0x0003488c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-exit.o)
+ .text.exit     0x0003488c       0x28 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-exit.o)
+                0x0003488c                exit
+ .text          0x000348b4        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-impure.o)
+ .text          0x000348b4        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-init.o)
  .text.__libc_init_array
-                0x00034774       0x4c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-init.o)
-                0x00034774                __libc_init_array
- .text          0x000347c0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memcpy-stub.o)
- .text.memcpy   0x000347c0       0x16 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memcpy-stub.o)
-                0x000347c0                memcpy
- .text          0x000347d6        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memset.o)
- .text.memset   0x000347d6       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memset.o)
-                0x000347d6                memset
- .text          0x000347e6        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-printf.o)
+                0x000348b4       0x4c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-init.o)
+                0x000348b4                __libc_init_array
+ .text          0x00034900        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memcpy-stub.o)
+ .text.memcpy   0x00034900       0x16 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00034900                memcpy
+ .text          0x00034916        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memset.o)
+ .text.memset   0x00034916       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memset.o)
+                0x00034916                memset
+ .text          0x00034926        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-printf.o)
  .text._printf_r
-                0x000347e6       0x28 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-printf.o)
-                0x000347e6                _iprintf_r
-                0x000347e6                _printf_r
- *fill*         0x0003480e        0x2 
- .text.printf   0x00034810       0x30 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-printf.o)
-                0x00034810                iprintf
-                0x00034810                printf
- .text          0x00034840        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-strcpy.o)
- .text.strcpy   0x00034840       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-strcpy.o)
-                0x00034840                strcpy
- .text          0x00034850       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-strlen.o)
-                0x00034850                strlen
- .text          0x00034860        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x00034926       0x28 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-printf.o)
+                0x00034926                _iprintf_r
+                0x00034926                _printf_r
+ *fill*         0x0003494e        0x2 
+ .text.printf   0x00034950       0x30 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-printf.o)
+                0x00034950                iprintf
+                0x00034950                printf
+ .text          0x00034980        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-strcpy.o)
+ .text.strcpy   0x00034980       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-strcpy.o)
+                0x00034980                strcpy
+ .text          0x00034990       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-strlen.o)
+                0x00034990                strlen
+ .text          0x000349a0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
  .text.__fp_unlock
-                0x00034860        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x000349a0        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
  .text._cleanup_r
-                0x00034864        0xc c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x00034864                _cleanup_r
+                0x000349a4        0xc c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x000349a4                _cleanup_r
  .text.std.isra.0
-                0x00034870       0x48 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x000349b0       0x48 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
  .text.__fp_lock
-                0x000348b8        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x000349f8        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
  .text.__sfmoreglue
-                0x000348bc       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x000348bc                __sfmoreglue
+                0x000349fc       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x000349fc                __sfmoreglue
  .text._cleanup
-                0x000348e8        0xc c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x000348e8                _cleanup
- .text.__sinit  0x000348f4       0x60 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x000348f4                __sinit
- .text.__sfp    0x00034954       0x78 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x00034954                __sfp
+                0x00034a28        0xc c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x00034a28                _cleanup
+ .text.__sinit  0x00034a34       0x60 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x00034a34                __sinit
+ .text.__sfp    0x00034a94       0x78 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x00034a94                __sfp
  .text.__sfp_lock_acquire
-                0x000349cc        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x000349cc                __sfp_lock_acquire
+                0x00034b0c        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x00034b0c                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x000349ce        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x000349ce                __sfp_lock_release
+                0x00034b0e        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x00034b0e                __sfp_lock_release
  .text.__sinit_lock_acquire
-                0x000349d0        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x000349d0                __sinit_lock_acquire
+                0x00034b10        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x00034b10                __sinit_lock_acquire
  .text.__sinit_lock_release
-                0x000349d2        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x000349d2                __sinit_lock_release
+                0x00034b12        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x00034b12                __sinit_lock_release
  .text.__fp_lock_all
-                0x000349d4       0x14 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x000349d4                __fp_lock_all
+                0x00034b14       0x14 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x00034b14                __fp_lock_all
  .text.__fp_unlock_all
-                0x000349e8       0x14 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x000349e8                __fp_unlock_all
- .text          0x000349fc        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fwalk.o)
- .text._fwalk   0x000349fc       0x38 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fwalk.o)
-                0x000349fc                _fwalk
+                0x00034b28       0x14 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x00034b28                __fp_unlock_all
+ .text          0x00034b3c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fwalk.o)
+ .text._fwalk   0x00034b3c       0x38 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fwalk.o)
+                0x00034b3c                _fwalk
  .text._fwalk_reent
-                0x00034a34       0x3c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fwalk.o)
-                0x00034a34                _fwalk_reent
- .text          0x00034a70        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-mallocr.o)
+                0x00034b74       0x3c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fwalk.o)
+                0x00034b74                _fwalk_reent
+ .text          0x00034bb0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-mallocr.o)
  .text._malloc_r
-                0x00034a70       0xbc c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-mallocr.o)
-                0x00034a70                _malloc_r
- .text          0x00034b2c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00034bb0       0xbc c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-mallocr.o)
+                0x00034bb0                _malloc_r
+ .text          0x00034c6c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputc_r
-                0x00034b2c       0x30 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00034c6c       0x30 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x00034b5c       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x00034b5c                __sfputs_r
+                0x00034c9c       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00034c9c                __sfputs_r
  .text.__sprint_r
-                0x00034b80       0x1a c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x00034b80                __sprint_r
- *fill*         0x00034b9a        0x2 
+                0x00034cc0       0x1a c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00034cc0                __sprint_r
+ *fill*         0x00034cda        0x2 
  .text._vfprintf_r
-                0x00034b9c      0x238 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x00034b9c                _vfprintf_r
-                0x00034b9c                _vfiprintf_r
+                0x00034cdc      0x238 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00034cdc                _vfprintf_r
+                0x00034cdc                _vfiprintf_r
  .text.vfprintf
-                0x00034dd4       0x14 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
-                0x00034dd4                vfprintf
-                0x00034dd4                vfiprintf
- .text          0x00034de8        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00034f14       0x14 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00034f14                vfprintf
+                0x00034f14                vfiprintf
+ .text          0x00034f28        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf_i.o)
  .text._printf_common
-                0x00034de8       0xec c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00034de8                _printf_common
+                0x00034f28       0xec c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00034f28                _printf_common
  .text._printf_i
-                0x00034ed4      0x24c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x00034ed4                _printf_i
- .text          0x00035120        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-sbrkr.o)
- .text._sbrk_r  0x00035120       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-sbrkr.o)
-                0x00035120                _sbrk_r
- .text          0x00035140        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
- .text.__sread  0x00035140       0x22 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
-                0x00035140                __sread
+                0x00035014      0x24c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00035014                _printf_i
+ .text          0x00035260        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-sbrkr.o)
+ .text._sbrk_r  0x00035260       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-sbrkr.o)
+                0x00035260                _sbrk_r
+ .text          0x00035280        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
+ .text.__sread  0x00035280       0x22 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
+                0x00035280                __sread
  .text.__seofread
-                0x00035162        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
-                0x00035162                __seofread
+                0x000352a2        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
+                0x000352a2                __seofread
  .text.__swrite
-                0x00035166       0x38 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
-                0x00035166                __swrite
- .text.__sseek  0x0003519e       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
-                0x0003519e                __sseek
+                0x000352a6       0x38 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
+                0x000352a6                __swrite
+ .text.__sseek  0x000352de       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
+                0x000352de                __sseek
  .text.__sclose
-                0x000351c2        0x8 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
-                0x000351c2                __sclose
- .text          0x000351ca        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wbuf.o)
- *fill*         0x000351ca        0x2 
+                0x00035302        0x8 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
+                0x00035302                __sclose
+ .text          0x0003530a        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wbuf.o)
+ *fill*         0x0003530a        0x2 
  .text.__swbuf_r
-                0x000351cc       0xa8 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wbuf.o)
-                0x000351cc                __swbuf_r
- .text.__swbuf  0x00035274       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wbuf.o)
-                0x00035274                __swbuf
- .text          0x00035284        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wsetup.o)
+                0x0003530c       0xa8 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wbuf.o)
+                0x0003530c                __swbuf_r
+ .text.__swbuf  0x000353b4       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wbuf.o)
+                0x000353b4                __swbuf
+ .text          0x000353c4        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wsetup.o)
  .text.__swsetup_r
-                0x00035284       0xdc c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wsetup.o)
-                0x00035284                __swsetup_r
- .text          0x00035360        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-closer.o)
+                0x000353c4       0xdc c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wsetup.o)
+                0x000353c4                __swsetup_r
+ .text          0x000354a0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-closer.o)
  .text._close_r
-                0x00035360       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-closer.o)
-                0x00035360                _close_r
- .text          0x00035380        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fflush.o)
+                0x000354a0       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-closer.o)
+                0x000354a0                _close_r
+ .text          0x000354c0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fflush.o)
  .text.__sflush_r
-                0x00035380      0x110 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fflush.o)
-                0x00035380                __sflush_r
+                0x000354c0      0x110 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fflush.o)
+                0x000354c0                __sflush_r
  .text._fflush_r
-                0x00035490       0x54 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fflush.o)
-                0x00035490                _fflush_r
- .text.fflush   0x000354e4       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fflush.o)
-                0x000354e4                fflush
- .text          0x00035508        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fvwrite.o)
+                0x000355d0       0x54 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fflush.o)
+                0x000355d0                _fflush_r
+ .text.fflush   0x00035624       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fflush.o)
+                0x00035624                fflush
+ .text          0x00035648        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fvwrite.o)
  .text.__sfvwrite_r
-                0x00035508      0x294 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fvwrite.o)
-                0x00035508                __sfvwrite_r
- .text          0x0003579c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-lseekr.o)
+                0x00035648      0x294 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fvwrite.o)
+                0x00035648                __sfvwrite_r
+ .text          0x000358dc        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-lseekr.o)
  .text._lseek_r
-                0x0003579c       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-lseekr.o)
-                0x0003579c                _lseek_r
- .text          0x000357c0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-makebuf.o)
+                0x000358dc       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-lseekr.o)
+                0x000358dc                _lseek_r
+ .text          0x00035900        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-makebuf.o)
  .text.__swhatbuf_r
-                0x000357c0       0x46 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-makebuf.o)
-                0x000357c0                __swhatbuf_r
- *fill*         0x00035806        0x2 
+                0x00035900       0x46 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-makebuf.o)
+                0x00035900                __swhatbuf_r
+ *fill*         0x00035946        0x2 
  .text.__smakebuf_r
-                0x00035808       0x78 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-makebuf.o)
-                0x00035808                __smakebuf_r
- .text          0x00035880       0xa0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memchr.o)
-                0x00035880                memchr
- .text          0x00035920        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memmove.o)
- .text.memmove  0x00035920       0x36 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memmove.o)
-                0x00035920                memmove
- .text          0x00035956        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-mlock.o)
+                0x00035948       0x78 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-makebuf.o)
+                0x00035948                __smakebuf_r
+ .text          0x000359c0       0xa0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memchr.o)
+                0x000359c0                memchr
+ .text          0x00035a60        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memmove.o)
+ .text.memmove  0x00035a60       0x36 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memmove.o)
+                0x00035a60                memmove
+ .text          0x00035a96        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-mlock.o)
  .text.__malloc_lock
-                0x00035956        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-mlock.o)
-                0x00035956                __malloc_lock
+                0x00035a96        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-mlock.o)
+                0x00035a96                __malloc_lock
  .text.__malloc_unlock
-                0x00035958        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-mlock.o)
-                0x00035958                __malloc_unlock
- .text          0x0003595a        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-freer.o)
- *fill*         0x0003595a        0x2 
- .text._free_r  0x0003595c       0x9c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-freer.o)
-                0x0003595c                _free_r
- .text          0x000359f8        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-reallocr.o)
+                0x00035a98        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-mlock.o)
+                0x00035a98                __malloc_unlock
+ .text          0x00035a9a        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-freer.o)
+ *fill*         0x00035a9a        0x2 
+ .text._free_r  0x00035a9c       0x9c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-freer.o)
+                0x00035a9c                _free_r
+ .text          0x00035b38        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-reallocr.o)
  .text._realloc_r
-                0x000359f8       0x4c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-reallocr.o)
-                0x000359f8                _realloc_r
- .text          0x00035a44        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-readr.o)
- .text._read_r  0x00035a44       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-readr.o)
-                0x00035a44                _read_r
- .text          0x00035a68        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-reent.o)
+                0x00035b38       0x4c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-reallocr.o)
+                0x00035b38                _realloc_r
+ .text          0x00035b84        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-readr.o)
+ .text._read_r  0x00035b84       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-readr.o)
+                0x00035b84                _read_r
+ .text          0x00035ba8        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-reent.o)
  .text.cleanup_glue
-                0x00035a68       0x1a c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-reent.o)
-                0x00035a68                cleanup_glue
- *fill*         0x00035a82        0x2 
+                0x00035ba8       0x1a c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-reent.o)
+                0x00035ba8                cleanup_glue
+ *fill*         0x00035bc2        0x2 
  .text._reclaim_reent
-                0x00035a84       0xb4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-reent.o)
-                0x00035a84                _reclaim_reent
- .text          0x00035b38        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fstatr.o)
+                0x00035bc4       0xb4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-reent.o)
+                0x00035bc4                _reclaim_reent
+ .text          0x00035c78        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fstatr.o)
  .text._fstat_r
-                0x00035b38       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fstatr.o)
-                0x00035b38                _fstat_r
- .text          0x00035b5c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-isattyr.o)
+                0x00035c78       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fstatr.o)
+                0x00035c78                _fstat_r
+ .text          0x00035c9c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-isattyr.o)
  .text._isatty_r
-                0x00035b5c       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-isattyr.o)
-                0x00035b5c                _isatty_r
- .text          0x00035b7c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-msizer.o)
+                0x00035c9c       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-isattyr.o)
+                0x00035c9c                _isatty_r
+ .text          0x00035cbc        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-msizer.o)
  .text._malloc_usable_size_r
-                0x00035b7c       0x14 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-msizer.o)
-                0x00035b7c                _malloc_usable_size_r
- .text          0x00035b90        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtend.o
- .text          0x00035b90        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtn.o
- .text          0x00035b90        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(close.o)
- .text._close   0x00035b90       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(close.o)
-                0x00035b90                _close
- .text          0x00035ba0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(fstat.o)
- .text._fstat   0x00035ba0       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(fstat.o)
-                0x00035ba0                _fstat
- .text          0x00035bb0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(isatty.o)
- .text._isatty  0x00035bb0       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(isatty.o)
-                0x00035bb0                _isatty
- .text          0x00035bc0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(lseek.o)
- .text._lseek   0x00035bc0       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(lseek.o)
-                0x00035bc0                _lseek
- .text          0x00035bd0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(read.o)
- .text._read    0x00035bd0       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(read.o)
-                0x00035bd0                _read
- .text          0x00035be0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(sbrk.o)
- .text._sbrk    0x00035be0       0x1c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(sbrk.o)
-                0x00035be0                _sbrk
- .text          0x00035bfc        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
- .text._exit    0x00035bfc        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
-                0x00035bfc                _exit
+                0x00035cbc       0x14 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-msizer.o)
+                0x00035cbc                _malloc_usable_size_r
+ .text          0x00035cd0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtend.o
+ .text          0x00035cd0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtn.o
+ .text          0x00035cd0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(close.o)
+ .text._close   0x00035cd0       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(close.o)
+                0x00035cd0                _close
+ .text          0x00035ce0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(fstat.o)
+ .text._fstat   0x00035ce0       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(fstat.o)
+                0x00035ce0                _fstat
+ .text          0x00035cf0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(isatty.o)
+ .text._isatty  0x00035cf0       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(isatty.o)
+                0x00035cf0                _isatty
+ .text          0x00035d00        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(lseek.o)
+ .text._lseek   0x00035d00       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(lseek.o)
+                0x00035d00                _lseek
+ .text          0x00035d10        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(read.o)
+ .text._read    0x00035d10       0x10 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(read.o)
+                0x00035d10                _read
+ .text          0x00035d20        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(sbrk.o)
+ .text._sbrk    0x00035d20       0x1c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(sbrk.o)
+                0x00035d20                _sbrk
+ .text          0x00035d3c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
+ .text._exit    0x00035d3c        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
+                0x00035d3c                _exit
  *(.init)
- .init          0x00035c00        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crti.o
-                0x00035c00                _init
- .init          0x00035c04        0x8 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtn.o
+ .init          0x00035d40        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crti.o
+                0x00035d40                _init
+ .init          0x00035d44        0x8 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtn.o
  *(.fini)
- .fini          0x00035c0c        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crti.o
-                0x00035c0c                _fini
- .fini          0x00035c10        0x8 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtn.o
+ .fini          0x00035d4c        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crti.o
+                0x00035d4c                _fini
+ .fini          0x00035d50        0x8 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -9523,220 +9523,220 @@ Linker script and memory map
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata        0x00035c18       0x17 ./src/segger-rtt/SEGGER_RTT.o
- *fill*         0x00035c2f        0x1 
+ .rodata        0x00035d58       0x17 ./src/segger-rtt/SEGGER_RTT.o
+ *fill*         0x00035d6f        0x1 
  .rodata._aV2C.7715
-                0x00035c30       0x10 ./src/segger-rtt/SEGGER_RTT_printf.o
- .rodata        0x00035c40       0x38 ./src/nrf5-sdk/softdevice/common/nrf_sdh.o
+                0x00035d70       0x10 ./src/segger-rtt/SEGGER_RTT_printf.o
+ .rodata        0x00035d80       0x38 ./src/nrf5-sdk/softdevice/common/nrf_sdh.o
  .rodata.sdh_req_observers
-                0x00035c78        0xc ./src/nrf5-sdk/softdevice/common/nrf_sdh.o
+                0x00035db8        0xc ./src/nrf5-sdk/softdevice/common/nrf_sdh.o
  .rodata.sdh_state_observers
-                0x00035c84        0xc ./src/nrf5-sdk/softdevice/common/nrf_sdh.o
+                0x00035dc4        0xc ./src/nrf5-sdk/softdevice/common/nrf_sdh.o
  .rodata.sdh_stack_observers
-                0x00035c90        0xc ./src/nrf5-sdk/softdevice/common/nrf_sdh.o
- .rodata        0x00035c9c      0x238 ./src/nrf5-sdk/softdevice/common/nrf_sdh_ble.o
+                0x00035dd0        0xc ./src/nrf5-sdk/softdevice/common/nrf_sdh.o
+ .rodata        0x00035ddc      0x238 ./src/nrf5-sdk/softdevice/common/nrf_sdh_ble.o
  .rodata.sdh_ble_observers
-                0x00035ed4        0xc ./src/nrf5-sdk/softdevice/common/nrf_sdh_ble.o
+                0x00036014        0xc ./src/nrf5-sdk/softdevice/common/nrf_sdh_ble.o
  .rodata.m_ram_start
-                0x00035ee0        0x4 ./src/nrf5-sdk/softdevice/common/nrf_sdh_ble.o
-                0x00035ee0                m_ram_start
- .rodata        0x00035ee4       0x90 ./src/nrf5-sdk/libraries/util/app_error_weak.o
- .rodata        0x00035f74       0x20 ./src/nrf5-sdk/libraries/uart/app_uart.o
+                0x00036020        0x4 ./src/nrf5-sdk/softdevice/common/nrf_sdh_ble.o
+                0x00036020                m_ram_start
+ .rodata        0x00036024       0x90 ./src/nrf5-sdk/libraries/util/app_error_weak.o
+ .rodata        0x000360b4       0x20 ./src/nrf5-sdk/libraries/uart/app_uart.o
  .rodata.m_unknown_str
-                0x00035f94       0x13 ./src/nrf5-sdk/libraries/strerror/nrf_strerror.o
- *fill*         0x00035fa7        0x1 
- .rodata        0x00035fa8      0x308 ./src/nrf5-sdk/libraries/strerror/nrf_strerror.o
+                0x000360d4       0x13 ./src/nrf5-sdk/libraries/strerror/nrf_strerror.o
+ *fill*         0x000360e7        0x1 
+ .rodata        0x000360e8      0x308 ./src/nrf5-sdk/libraries/strerror/nrf_strerror.o
  .rodata.nrf_strerror_array
-                0x000362b0       0xf0 ./src/nrf5-sdk/libraries/strerror/nrf_strerror.o
+                0x000363f0       0xf0 ./src/nrf5-sdk/libraries/strerror/nrf_strerror.o
  .rodata.nrf_log_backend_rtt_api
-                0x000363a0        0xc ./src/nrf5-sdk/libraries/experimental_log/nrf_log_backend_rtt.o
-                0x000363a0                nrf_log_backend_rtt_api
- .rodata        0x000363ac       0x18 ./src/nrf5-sdk/libraries/experimental_log/nrf_log_frontend.o
+                0x000364e0        0xc ./src/nrf5-sdk/libraries/experimental_log/nrf_log_backend_rtt.o
+                0x000364e0                nrf_log_backend_rtt_api
+ .rodata        0x000364ec       0x18 ./src/nrf5-sdk/libraries/experimental_log/nrf_log_frontend.o
  .rodata.mempool
-                0x000363c4       0x1c ./src/nrf5-sdk/libraries/experimental_log/nrf_log_frontend.o
- .rodata        0x000363e0       0x92 ./src/nrf5-sdk/libraries/experimental_log/nrf_log_str_formatter.o
- *fill*         0x00036472        0x2 
+                0x00036504       0x1c ./src/nrf5-sdk/libraries/experimental_log/nrf_log_frontend.o
+ .rodata        0x00036520       0x92 ./src/nrf5-sdk/libraries/experimental_log/nrf_log_str_formatter.o
+ *fill*         0x000365b2        0x2 
  .rodata.m_detection_delay_timer_id
-                0x00036474        0x4 ./src/nrf5-sdk/libraries/button/app_button.o
+                0x000365b4        0x4 ./src/nrf5-sdk/libraries/button/app_button.o
  .rodata.m_leds_timer_id
-                0x00036478        0x4 ./src/nrf5-sdk/libraries/bsp/bsp.o
+                0x000365b8        0x4 ./src/nrf5-sdk/libraries/bsp/bsp.o
  .rodata.m_alert_timer_id
-                0x0003647c        0x4 ./src/nrf5-sdk/libraries/bsp/bsp.o
+                0x000365bc        0x4 ./src/nrf5-sdk/libraries/bsp/bsp.o
  .rodata.m_button_timer_id
-                0x00036480        0x4 ./src/nrf5-sdk/libraries/bsp/bsp.o
+                0x000365c0        0x4 ./src/nrf5-sdk/libraries/bsp/bsp.o
  .rodata.app_buttons
-                0x00036484       0x20 ./src/nrf5-sdk/libraries/bsp/bsp.o
- .rodata        0x000364a4      0x282 ./src/nrf5-sdk/libraries/balloc/nrf_balloc.o
- *fill*         0x00036726        0x2 
- .rodata        0x00036728        0x5 ./src/nrf5-sdk/drivers_nrf/uart/nrf_drv_uart.o
- *fill*         0x0003672d        0x3 
- .rodata        0x00036730       0x37 ./src/nrf5-sdk/drivers_nrf/gpiote/nrf_drv_gpiote.o
- *fill*         0x00036767        0x1 
+                0x000365c4       0x20 ./src/nrf5-sdk/libraries/bsp/bsp.o
+ .rodata        0x000365e4      0x282 ./src/nrf5-sdk/libraries/balloc/nrf_balloc.o
+ *fill*         0x00036866        0x2 
+ .rodata        0x00036868        0x5 ./src/nrf5-sdk/drivers_nrf/uart/nrf_drv_uart.o
+ *fill*         0x0003686d        0x3 
+ .rodata        0x00036870       0x37 ./src/nrf5-sdk/drivers_nrf/gpiote/nrf_drv_gpiote.o
+ *fill*         0x000368a7        0x1 
  .rodata.__func__.8566
-                0x00036768       0x14 ./src/nrf5-sdk/drivers_nrf/gpiote/nrf_drv_gpiote.o
+                0x000368a8       0x14 ./src/nrf5-sdk/drivers_nrf/gpiote/nrf_drv_gpiote.o
  .rodata.__func__.8590
-                0x0003677c       0x18 ./src/nrf5-sdk/drivers_nrf/gpiote/nrf_drv_gpiote.o
+                0x000368bc       0x18 ./src/nrf5-sdk/drivers_nrf/gpiote/nrf_drv_gpiote.o
  .rodata.__func__.8645
-                0x00036794       0x17 ./src/nrf5-sdk/drivers_nrf/gpiote/nrf_drv_gpiote.o
- *fill*         0x000367ab        0x1 
+                0x000368d4       0x17 ./src/nrf5-sdk/drivers_nrf/gpiote/nrf_drv_gpiote.o
+ *fill*         0x000368eb        0x1 
  .rodata.m_board_led_list
-                0x000367ac        0x4 ./src/nrf5-sdk/boards/boards.o
+                0x000368ec        0x4 ./src/nrf5-sdk/boards/boards.o
  .rodata.m_board_btn_list
-                0x000367b0        0x4 ./src/nrf5-sdk/boards/boards.o
- .rodata        0x000367b4      0x3f9 ./src/nrf5-sdk/ble/nrf_ble_gatt/nrf_ble_gatt.o
- *fill*         0x00036bad        0x3 
- .rodata        0x00036bb0       0x2c ./src/nrf5-sdk/ble/common/ble_conn_state.o
- .rodata        0x00036bdc       0x2c ./src/nrf5-sdk/ble/common/ble_srv_common.o
+                0x000368f0        0x4 ./src/nrf5-sdk/boards/boards.o
+ .rodata        0x000368f4      0x3f9 ./src/nrf5-sdk/ble/nrf_ble_gatt/nrf_ble_gatt.o
+ *fill*         0x00036ced        0x3 
+ .rodata        0x00036cf0       0x2c ./src/nrf5-sdk/ble/common/ble_conn_state.o
+ .rodata        0x00036d1c       0x2c ./src/nrf5-sdk/ble/common/ble_srv_common.o
  .rodata._aV2C.7054
-                0x00036c08       0x10 ./src/fprintf/nrf_fprintf_format.o
+                0x00036d48       0x10 ./src/fprintf/nrf_fprintf_format.o
  .rodata.app_scan_param
-                0x00036c18        0x8 ./src/application.o
+                0x00036d58        0x8 ./src/application.o
  .rodata.ble_adv_data
-                0x00036c20       0x16 ./src/application.o
-                0x00036c20                ble_adv_data
- *fill*         0x00036c36        0x2 
- .rodata        0x00036c38      0x369 ./src/application.o
- *fill*         0x00036fa1        0x3 
- .rodata        0x00036fa4       0x24 ./src/main.o
+                0x00036d60       0x16 ./src/application.o
+                0x00036d60                ble_adv_data
+ *fill*         0x00036d76        0x2 
+ .rodata        0x00036d78      0x40d ./src/application.o
+ *fill*         0x00037185        0x3 
+ .rodata        0x00037188       0x24 ./src/main.o
  .rodata._ctype_
-                0x00036fc8      0x101 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-ctype_.o)
-                0x00036fc8                _ctype_
+                0x000371ac      0x101 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-ctype_.o)
+                0x000371ac                _ctype_
  .rodata.str1.1
-                0x000370c9        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-impure.o)
- *fill*         0x000370cb        0x1 
+                0x000372ad        0x2 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-impure.o)
+ *fill*         0x000372af        0x1 
  .rodata._global_impure_ptr
-                0x000370cc        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-impure.o)
-                0x000370cc                _global_impure_ptr
+                0x000372b0        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-impure.o)
+                0x000372b0                _global_impure_ptr
  .rodata.__sf_fake_stdin
-                0x000370d0       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x000370d0                __sf_fake_stdin
+                0x000372b4       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x000372b4                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x000370f0       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x000370f0                __sf_fake_stdout
+                0x000372d4       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x000372d4                __sf_fake_stdout
  .rodata.__sf_fake_stderr
-                0x00037110       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
-                0x00037110                __sf_fake_stderr
+                0x000372f4       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+                0x000372f4                __sf_fake_stderr
  .rodata.str1.1
-                0x00037130       0x11 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
+                0x00037314       0x11 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
  .rodata.str1.1
-                0x00037141       0x22 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00037325       0x22 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf_i.o)
  *(.eh_frame*)
- *fill*         0x00037163        0x1 
- .eh_frame      0x00037164        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
- .eh_frame      0x00037164        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtend.o
+ *fill*         0x00037347        0x1 
+ .eh_frame      0x00037348        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
+ .eh_frame      0x00037348        0x4 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtend.o
 
-.glue_7         0x00037168        0x0
- .glue_7        0x00037168        0x0 linker stubs
+.glue_7         0x0003734c        0x0
+ .glue_7        0x0003734c        0x0 linker stubs
 
-.glue_7t        0x00037168        0x0
- .glue_7t       0x00037168        0x0 linker stubs
+.glue_7t        0x0003734c        0x0
+ .glue_7t       0x0003734c        0x0 linker stubs
 
-.vfp11_veneer   0x00037168        0x0
- .vfp11_veneer  0x00037168        0x0 linker stubs
+.vfp11_veneer   0x0003734c        0x0
+ .vfp11_veneer  0x0003734c        0x0 linker stubs
 
-.v4_bx          0x00037168        0x0
- .v4_bx         0x00037168        0x0 linker stubs
+.v4_bx          0x0003734c        0x0
+ .v4_bx         0x0003734c        0x0 linker stubs
 
-.iplt           0x00037168        0x0
- .iplt          0x00037168        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
+.iplt           0x0003734c        0x0
+ .iplt          0x0003734c        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
 
 .mem_section_dummy_rom
 
 .sdh_soc_observers
-                0x00037168        0x0
+                0x0003734c        0x0
                 [!provide]                PROVIDE (__start_sdh_soc_observers, .)
  *(SORT(.sdh_soc_observers*))
                 [!provide]                PROVIDE (__stop_sdh_soc_observers, .)
 
-.pwr_mgmt_data  0x00037168        0x0
+.pwr_mgmt_data  0x0003734c        0x0
                 [!provide]                PROVIDE (__start_pwr_mgmt_data, .)
  *(SORT(.pwr_mgmt_data*))
                 [!provide]                PROVIDE (__stop_pwr_mgmt_data, .)
 
 .sdh_ble_observers
-                0x00037168       0x28
-                0x00037168                PROVIDE (__start_sdh_ble_observers, .)
+                0x0003734c       0x28
+                0x0003734c                PROVIDE (__start_sdh_ble_observers, .)
  *(SORT(.sdh_ble_observers*))
  .sdh_ble_observers0
-                0x00037168        0x8 ./src/nrf5-sdk/ble/common/ble_conn_state.o
+                0x0003734c        0x8 ./src/nrf5-sdk/ble/common/ble_conn_state.o
  .sdh_ble_observers1
-                0x00037170        0x8 ./src/nrf5-sdk/libraries/bsp/bsp_btn_ble.o
+                0x00037354        0x8 ./src/nrf5-sdk/libraries/bsp/bsp_btn_ble.o
  .sdh_ble_observers1
-                0x00037178        0x8 ./src/nrf5-sdk/ble/common/ble_conn_params.o
+                0x0003735c        0x8 ./src/nrf5-sdk/ble/common/ble_conn_params.o
  .sdh_ble_observers3
-                0x00037180       0x10 ./src/application.o
-                0x00037190                PROVIDE (__stop_sdh_ble_observers, .)
+                0x00037364       0x10 ./src/application.o
+                0x00037374                PROVIDE (__stop_sdh_ble_observers, .)
 
 .log_const_data
-                0x00037190       0x38
-                0x00037190                PROVIDE (__start_log_const_data, .)
+                0x00037374       0x38
+                0x00037374                PROVIDE (__start_log_const_data, .)
  *(.log_const_data)
  .log_const_data
-                0x00037190        0x8 ./src/nrf5-sdk/softdevice/common/nrf_sdh.o
-                0x00037190                m_nrf_log_nrf_sdh_logs_data_const
+                0x00037374        0x8 ./src/nrf5-sdk/softdevice/common/nrf_sdh.o
+                0x00037374                m_nrf_log_nrf_sdh_logs_data_const
  .log_const_data
-                0x00037198        0x8 ./src/nrf5-sdk/softdevice/common/nrf_sdh_ble.o
-                0x00037198                m_nrf_log_nrf_sdh_ble_logs_data_const
+                0x0003737c        0x8 ./src/nrf5-sdk/softdevice/common/nrf_sdh_ble.o
+                0x0003737c                m_nrf_log_nrf_sdh_ble_logs_data_const
  .log_const_data
-                0x000371a0        0x8 ./src/nrf5-sdk/libraries/experimental_log/nrf_log_frontend.o
-                0x000371a0                m_nrf_log_app_logs_data_const
+                0x00037384        0x8 ./src/nrf5-sdk/libraries/experimental_log/nrf_log_frontend.o
+                0x00037384                m_nrf_log_app_logs_data_const
  .log_const_data
-                0x000371a8        0x8 ./src/nrf5-sdk/libraries/balloc/nrf_balloc.o
-                0x000371a8                m_nrf_log_balloc_logs_data_const
+                0x0003738c        0x8 ./src/nrf5-sdk/libraries/balloc/nrf_balloc.o
+                0x0003738c                m_nrf_log_balloc_logs_data_const
  .log_const_data
-                0x000371b0        0x8 ./src/nrf5-sdk/drivers_nrf/uart/nrf_drv_uart.o
-                0x000371b0                m_nrf_log_uart_logs_data_const
+                0x00037394        0x8 ./src/nrf5-sdk/drivers_nrf/uart/nrf_drv_uart.o
+                0x00037394                m_nrf_log_uart_logs_data_const
  .log_const_data
-                0x000371b8        0x8 ./src/nrf5-sdk/drivers_nrf/gpiote/nrf_drv_gpiote.o
-                0x000371b8                m_nrf_log_gpiote_logs_data_const
+                0x0003739c        0x8 ./src/nrf5-sdk/drivers_nrf/gpiote/nrf_drv_gpiote.o
+                0x0003739c                m_nrf_log_gpiote_logs_data_const
  .log_const_data
-                0x000371c0        0x8 ./src/nrf5-sdk/ble/nrf_ble_gatt/nrf_ble_gatt.o
-                0x000371c0                m_nrf_log_ble_gatt_logs_data_const
-                0x000371c8                PROVIDE (__stop_log_const_data, .)
+                0x000373a4        0x8 ./src/nrf5-sdk/ble/nrf_ble_gatt/nrf_ble_gatt.o
+                0x000373a4                m_nrf_log_ble_gatt_logs_data_const
+                0x000373ac                PROVIDE (__stop_log_const_data, .)
 
 .sdh_state_observers
-                0x000371c8        0x0
-                0x000371c8                PROVIDE (__start_sdh_state_observers, .)
+                0x000373ac        0x0
+                0x000373ac                PROVIDE (__start_sdh_state_observers, .)
  *(SORT(.sdh_state_observers*))
-                0x000371c8                PROVIDE (__stop_sdh_state_observers, .)
+                0x000373ac                PROVIDE (__stop_sdh_state_observers, .)
 
 .sdh_stack_observers
-                0x000371c8        0x8
-                0x000371c8                PROVIDE (__start_sdh_stack_observers, .)
+                0x000373ac        0x8
+                0x000373ac                PROVIDE (__start_sdh_stack_observers, .)
  *(SORT(.sdh_stack_observers*))
  .sdh_stack_observers0
-                0x000371c8        0x8 ./src/nrf5-sdk/softdevice/common/nrf_sdh_ble.o
-                0x000371d0                PROVIDE (__stop_sdh_stack_observers, .)
+                0x000373ac        0x8 ./src/nrf5-sdk/softdevice/common/nrf_sdh_ble.o
+                0x000373b4                PROVIDE (__stop_sdh_stack_observers, .)
 
 .sdh_req_observers
-                0x000371d0        0x0
-                0x000371d0                PROVIDE (__start_sdh_req_observers, .)
+                0x000373b4        0x0
+                0x000373b4                PROVIDE (__start_sdh_req_observers, .)
  *(SORT(.sdh_req_observers*))
-                0x000371d0                PROVIDE (__stop_sdh_req_observers, .)
+                0x000373b4                PROVIDE (__stop_sdh_req_observers, .)
 
-.cli_command    0x000371d0        0x0
+.cli_command    0x000373b4        0x0
                 [!provide]                PROVIDE (__start_cli_command, .)
  *(.cli_command)
                 [!provide]                PROVIDE (__stop_cli_command, .)
 
-.ARM.extab      0x000371d0        0x0
+.ARM.extab      0x000373b4        0x0
  *(.ARM.extab* .gnu.linkonce.armextab.*)
- .ARM.extab     0x000371d0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
- .ARM.extab     0x000371d0        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
-                0x000371d0                __exidx_start = .
+ .ARM.extab     0x000373b4        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .ARM.extab     0x000373b4        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
+                0x000373b4                __exidx_start = .
 
-.ARM.exidx      0x000371d0        0x8
+.ARM.exidx      0x000373b4        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x000371d0        0x8 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
- .ARM.exidx     0x000371d8        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x000373b4        0x8 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .ARM.exidx     0x000373bc        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
                                   0x8 (size before relaxing)
-                0x000371d8                __exidx_end = .
-                0x000371d8                __etext = .
+                0x000373bc                __exidx_end = .
+                0x000373bc                __etext = .
 
-.rel.dyn        0x000371d8        0x0
- .rel.iplt      0x000371d8        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
+.rel.dyn        0x000373bc        0x0
+ .rel.iplt      0x000373bc        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
 
-.data           0x200020e0      0x108 load address 0x000371d8
+.data           0x200020e0      0x108 load address 0x000373bc
                 0x200020e0                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -9945,14 +9945,14 @@ LOAD c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../l
 LOAD c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a
 END GROUP
 
-.igot.plt       0x200021e8        0x0 load address 0x000372e0
+.igot.plt       0x200021e8        0x0 load address 0x000374c4
  .igot.plt      0x200021e8        0x0 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu/crtbegin.o
                 0x200021e8                . = ALIGN (0x4)
 
 .mem_section_dummy_ram
 
 .log_dynamic_data
-                0x200021e8       0x54 load address 0x000372e0
+                0x200021e8       0x54 load address 0x000374c4
                 0x200021e8                PROVIDE (__start_log_dynamic_data, .)
  *(.log_dynamic_data)
  .log_dynamic_data
@@ -9989,7 +9989,7 @@ END GROUP
  *(.cli_sorted_cmd_ptrs)
                 [!provide]                PROVIDE (__stop_cli_sorted_cmd_ptrs, .)
 
-.bss            0x2000223c      0xc04 load address 0x00037334
+.bss            0x2000223c      0xc04 load address 0x00037518
                 0x2000223c                . = ALIGN (0x4)
                 0x2000223c                __bss_start__ = .
  *(.bss*)
@@ -10236,8 +10236,8 @@ END GROUP
                 0x20010000                PROVIDE (__stack, __StackTop)
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
                 0x0000015c                DataInitFlashUsed = (__bss_start__ - __data_start__)
-                0x000141d8                CodeFlashUsed = (__etext - ORIGIN (FLASH))
-                0x00014334                TotalFlashUsed = (CodeFlashUsed + DataInitFlashUsed)
+                0x000143bc                CodeFlashUsed = (__etext - ORIGIN (FLASH))
+                0x00014518                TotalFlashUsed = (CodeFlashUsed + DataInitFlashUsed)
                 0x00000001                ASSERT ((TotalFlashUsed <= LENGTH (FLASH)), region FLASH overflowed with .data and user data)
 OUTPUT(ble_tp.elf elf32-littlearm)
 
@@ -10474,7 +10474,7 @@ OUTPUT(ble_tp.elf elf32-littlearm)
  .comment       0x0000006e       0x6f ./src/encryption.o
  .comment       0x0000006e       0x6f ./src/main.o
 
-.debug_info     0x00000000    0x449ca
+.debug_info     0x00000000    0x449f8
  .debug_info    0x00000000     0x1a08 ./src/segger-rtt/SEGGER_RTT.o
  .debug_info    0x00001a08     0x14b5 ./src/segger-rtt/SEGGER_RTT_Syscalls_GCC.o
  .debug_info    0x00002ebd      0xf90 ./src/segger-rtt/SEGGER_RTT_printf.o
@@ -10516,11 +10516,11 @@ OUTPUT(ble_tp.elf elf32-littlearm)
  .debug_info    0x00037ae2     0x500c ./src/nrf5-sdk/ble/ble_advertising/ble_advertising.o
  .debug_info    0x0003caee      0x236 ./src/fprintf/nrf_fprintf.o
  .debug_info    0x0003cd24      0x477 ./src/fprintf/nrf_fprintf_format.o
- .debug_info    0x0003d19b     0x4d6b ./src/application.o
- .debug_info    0x00041f06      0x154 ./src/encryption.o
- .debug_info    0x0004205a     0x2970 ./src/main.o
+ .debug_info    0x0003d19b     0x4d99 ./src/application.o
+ .debug_info    0x00041f34      0x154 ./src/encryption.o
+ .debug_info    0x00042088     0x2970 ./src/main.o
 
-.debug_abbrev   0x00000000     0x5bd5
+.debug_abbrev   0x00000000     0x5be4
  .debug_abbrev  0x00000000      0x27b ./src/segger-rtt/SEGGER_RTT.o
  .debug_abbrev  0x0000027b      0x23e ./src/segger-rtt/SEGGER_RTT_Syscalls_GCC.o
  .debug_abbrev  0x000004b9      0x23c ./src/segger-rtt/SEGGER_RTT_printf.o
@@ -10562,9 +10562,9 @@ OUTPUT(ble_tp.elf elf32-littlearm)
  .debug_abbrev  0x0000502b      0x378 ./src/nrf5-sdk/ble/ble_advertising/ble_advertising.o
  .debug_abbrev  0x000053a3       0xf7 ./src/fprintf/nrf_fprintf.o
  .debug_abbrev  0x0000549a      0x17b ./src/fprintf/nrf_fprintf_format.o
- .debug_abbrev  0x00005615      0x323 ./src/application.o
- .debug_abbrev  0x00005938       0xbc ./src/encryption.o
- .debug_abbrev  0x000059f4      0x1e1 ./src/main.o
+ .debug_abbrev  0x00005615      0x332 ./src/application.o
+ .debug_abbrev  0x00005947       0xbc ./src/encryption.o
+ .debug_abbrev  0x00005a03      0x1e1 ./src/main.o
 
 .debug_aranges  0x00000000     0x48a8
  .debug_aranges
@@ -10883,7 +10883,7 @@ OUTPUT(ble_tp.elf elf32-littlearm)
  .debug_macro   0x0001d72e       0x2e ./src/encryption.o
  .debug_macro   0x0001d75c      0x37f ./src/main.o
 
-.debug_line     0x00000000    0x20a64
+.debug_line     0x00000000    0x20aa5
  .debug_line    0x00000000      0xe05 ./src/segger-rtt/SEGGER_RTT.o
  .debug_line    0x00000e05      0x9f1 ./src/segger-rtt/SEGGER_RTT_Syscalls_GCC.o
  .debug_line    0x000017f6      0xb6a ./src/segger-rtt/SEGGER_RTT_printf.o
@@ -10925,11 +10925,11 @@ OUTPUT(ble_tp.elf elf32-littlearm)
  .debug_line    0x0001bc74     0x166a ./src/nrf5-sdk/ble/ble_advertising/ble_advertising.o
  .debug_line    0x0001d2de      0x724 ./src/fprintf/nrf_fprintf.o
  .debug_line    0x0001da02      0x899 ./src/fprintf/nrf_fprintf_format.o
- .debug_line    0x0001e29b     0x18a8 ./src/application.o
- .debug_line    0x0001fb43      0x10c ./src/encryption.o
- .debug_line    0x0001fc4f      0xe15 ./src/main.o
+ .debug_line    0x0001e29b     0x18e9 ./src/application.o
+ .debug_line    0x0001fb84      0x10c ./src/encryption.o
+ .debug_line    0x0001fc90      0xe15 ./src/main.o
 
-.debug_str      0x00000000    0x860a1
+.debug_str      0x00000000    0x860b7
  .debug_str     0x00000000    0x6693c ./src/segger-rtt/SEGGER_RTT.o
                               0x6770c (size before relaxing)
  .debug_str     0x0006693c      0x3ae ./src/segger-rtt/SEGGER_RTT_Syscalls_GCC.o
@@ -11010,14 +11010,14 @@ OUTPUT(ble_tp.elf elf32-littlearm)
                               0x69c64 (size before relaxing)
  .debug_str     0x00085969       0xe0 ./src/fprintf/nrf_fprintf_format.o
                               0x69d49 (size before relaxing)
- .debug_str     0x00085a49      0x608 ./src/application.o
-                              0x7891f (size before relaxing)
- .debug_str     0x00086051       0x3d ./src/encryption.o
+ .debug_str     0x00085a49      0x61e ./src/application.o
+                              0x78935 (size before relaxing)
+ .debug_str     0x00086067       0x3d ./src/encryption.o
                                0x30de (size before relaxing)
- .debug_str     0x0008608e       0x13 ./src/main.o
+ .debug_str     0x000860a4       0x13 ./src/main.o
                               0x6d8bf (size before relaxing)
 
-.debug_frame    0x00000000     0xc3e4
+.debug_frame    0x00000000     0xc3f0
  .debug_frame   0x00000000      0x6ec ./src/segger-rtt/SEGGER_RTT.o
  .debug_frame   0x000006ec      0x2f8 ./src/segger-rtt/SEGGER_RTT_Syscalls_GCC.o
  .debug_frame   0x000009e4      0x380 ./src/segger-rtt/SEGGER_RTT_printf.o
@@ -11056,47 +11056,47 @@ OUTPUT(ble_tp.elf elf32-littlearm)
  .debug_frame   0x0000a018      0xa9c ./src/nrf5-sdk/ble/ble_advertising/ble_advertising.o
  .debug_frame   0x0000aab4       0x6c ./src/fprintf/nrf_fprintf.o
  .debug_frame   0x0000ab20       0xcc ./src/fprintf/nrf_fprintf_format.o
- .debug_frame   0x0000abec      0x944 ./src/application.o
- .debug_frame   0x0000b530       0x5c ./src/encryption.o
- .debug_frame   0x0000b58c      0x504 ./src/main.o
- .debug_frame   0x0000ba90       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000babc       0x34 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x0000baf0       0x28 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x0000bb18       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-init.o)
- .debug_frame   0x0000bb44       0x28 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000bb6c       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memset.o)
- .debug_frame   0x0000bb8c       0x74 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-printf.o)
- .debug_frame   0x0000bc00       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-strcpy.o)
- .debug_frame   0x0000bc20      0x11c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
- .debug_frame   0x0000bd3c       0x54 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fwalk.o)
- .debug_frame   0x0000bd90       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x0000bdbc       0xac c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
- .debug_frame   0x0000be68       0x60 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x0000bec8       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x0000bef4       0x88 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
- .debug_frame   0x0000bf7c       0x40 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wbuf.o)
- .debug_frame   0x0000bfbc       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wsetup.o)
- .debug_frame   0x0000bfe8       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-closer.o)
- .debug_frame   0x0000c014       0x68 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fflush.o)
- .debug_frame   0x0000c07c       0x3c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fvwrite.o)
- .debug_frame   0x0000c0b8       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-lseekr.o)
- .debug_frame   0x0000c0e4       0x54 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-makebuf.o)
- .debug_frame   0x0000c138       0x28 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memmove.o)
- .debug_frame   0x0000c160       0x30 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-mlock.o)
- .debug_frame   0x0000c190       0x38 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x0000c1c8       0x3c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x0000c204       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-readr.o)
- .debug_frame   0x0000c230       0x5c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-reent.o)
- .debug_frame   0x0000c28c       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fstatr.o)
- .debug_frame   0x0000c2b8       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-isattyr.o)
- .debug_frame   0x0000c2e4       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x0000c304       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(close.o)
- .debug_frame   0x0000c324       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(fstat.o)
- .debug_frame   0x0000c344       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(isatty.o)
- .debug_frame   0x0000c364       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(lseek.o)
- .debug_frame   0x0000c384       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(read.o)
- .debug_frame   0x0000c3a4       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(sbrk.o)
- .debug_frame   0x0000c3c4       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
+ .debug_frame   0x0000abec      0x950 ./src/application.o
+ .debug_frame   0x0000b53c       0x5c ./src/encryption.o
+ .debug_frame   0x0000b598      0x504 ./src/main.o
+ .debug_frame   0x0000ba9c       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000bac8       0x34 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/fpu\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000bafc       0x28 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x0000bb24       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x0000bb50       0x28 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000bb78       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000bb98       0x74 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-printf.o)
+ .debug_frame   0x0000bc0c       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-strcpy.o)
+ .debug_frame   0x0000bc2c      0x11c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-findfp.o)
+ .debug_frame   0x0000bd48       0x54 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fwalk.o)
+ .debug_frame   0x0000bd9c       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000bdc8       0xac c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf.o)
+ .debug_frame   0x0000be74       0x60 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000bed4       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000bf00       0x88 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-stdio.o)
+ .debug_frame   0x0000bf88       0x40 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wbuf.o)
+ .debug_frame   0x0000bfc8       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-wsetup.o)
+ .debug_frame   0x0000bff4       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-closer.o)
+ .debug_frame   0x0000c020       0x68 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fflush.o)
+ .debug_frame   0x0000c088       0x3c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fvwrite.o)
+ .debug_frame   0x0000c0c4       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-lseekr.o)
+ .debug_frame   0x0000c0f0       0x54 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-makebuf.o)
+ .debug_frame   0x0000c144       0x28 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x0000c16c       0x30 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000c19c       0x38 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000c1d4       0x3c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x0000c210       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-readr.o)
+ .debug_frame   0x0000c23c       0x5c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-reent.o)
+ .debug_frame   0x0000c298       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-fstatr.o)
+ .debug_frame   0x0000c2c4       0x2c c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-isattyr.o)
+ .debug_frame   0x0000c2f0       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x0000c310       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(close.o)
+ .debug_frame   0x0000c330       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(fstat.o)
+ .debug_frame   0x0000c350       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(isatty.o)
+ .debug_frame   0x0000c370       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(lseek.o)
+ .debug_frame   0x0000c390       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(read.o)
+ .debug_frame   0x0000c3b0       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(sbrk.o)
+ .debug_frame   0x0000c3d0       0x20 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
 
 .stab           0x00000000       0x84
  .stab          0x00000000       0x24 c:/program files (x86)/gcc-arm-none-eabi-5_4-2016q2-20160622-win32/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(close.o)

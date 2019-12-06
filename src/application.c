@@ -84,9 +84,9 @@ static const ble_gap_scan_params_t app_scan_param =
 
 const uint8_t ble_adv_data[] = {0x0A, BLE_TYP_COMP_LOCAL_NAME, 'P','J','E','A','-','D','E','S','N',     /* Complete local name */  // pjeann desnos
 								0x02, BLE_TYP_FLAGS, BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED,   /* Flags */
-								0x03, BLE_TYP_APPAREANCE, 0x7e, 0x01,                         /* GAP Appearance :
-																								BLE_APPEARANCE_GENERIC_HEART_RATE_SENSOR :
-																								an heart because we love BLE !! */
+								0x03, BLE_TYP_APPAREANCE, 0xc7, 0x03,                         /* GAP Appearance :
+																								  0x03C6 pens:
+																								! */
 								0x03, BLE_TYP_16BIT_UUID, 0x1c, 0x18};                        /* Complete list of 16 bits UUID GATT TYPE USER DATA */
 								// complete size = 22 bytes user data can't exceed 31-22  = 9 bytes ?
 
@@ -109,25 +109,41 @@ static uint8_t ble_mess_count;
 
 void test_ciphering(void)
 {
-	printf("cipher test 1 \n");
-	/* uint8_t MESSAGE_TEST[] = "CECI EST UN TEST DE CHIFFREMENT \0";
+	printf("cipher test \n");
+	 uint8_t i;
+	 uint8_t MESSAGE_TEST[] = "CECI EST UN TEST DE CHIFFREMENT";
 	 uint8_t KEY_TEST[] = {0x0A, 0x1B, 0xFE, 0xDE, 0xFD, 0xAB, 0xB1, 0x04};
 
 	 printf("taille du message  : %d \n",sizeof(MESSAGE_TEST));
 	 printf("taille de la clef  : %d \n",sizeof(KEY_TEST));
 
-	 printf("message initial : %s \n",MESSAGE_TEST);
+
+	 printf("message initial : ");
+	 for(i=0;i<sizeof(MESSAGE_TEST);i++)
+	 {
+		 printf("%c",MESSAGE_TEST[i]);
+	 }
+	 printf("\n");
 
 	 encrypt_message(&KEY_TEST,sizeof(KEY_TEST),&MESSAGE_TEST,sizeof(MESSAGE_TEST));
 
-	 printf("message chiffrer : %s \n",MESSAGE_TEST);
+	 printf("message chiffrer : ");
+	 for(i=0;i<sizeof(MESSAGE_TEST);i++)
+		 {
+			 printf("%c",MESSAGE_TEST[i]);
+		 }
+		 printf("\n");
 
 	 decrypt_message(&KEY_TEST,sizeof(KEY_TEST),&MESSAGE_TEST,sizeof(MESSAGE_TEST));
 
-	 printf("message dechiffrer : %s \n",MESSAGE_TEST);*/
+	 printf("message dechiffrer : ");
+	 for(i=0;i<sizeof(MESSAGE_TEST);i++)
+		 {
+			 printf("%c",MESSAGE_TEST[i]);
+		 }
+		 printf("\n");
 
 }
-
 
 
 
@@ -136,7 +152,7 @@ app_error_t app_initialise_hardware(void)
 {
 	app_error_t ret = APP_NO_ERROR;
 	ret_code_t errcode;
-	//printf("int !! \n");
+
 
 	// Initialise the log system used by the drivers to report errors and warnings
     errcode = NRF_LOG_INIT(NULL);
@@ -544,7 +560,7 @@ int8_t app_create_ble_adv(const uint8_t *adv_src, uint8_t adv_src_length, const 
 		ret = size;
 
 		// Encrypt the data
-		//encrypt_message(KEY, sizeof(KEY), &ble_adv[adv_src_length + 2], size);
+		encrypt_message(KEY, sizeof(KEY), &ble_adv[adv_src_length + 2], size);
 	}
 
 	// Set the size ready to be sent

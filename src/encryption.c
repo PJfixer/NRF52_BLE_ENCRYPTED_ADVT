@@ -18,7 +18,7 @@ uint8_t encrypt_message(const uint8_t *key, uint8_t key_size, uint8_t *msg, uint
 
 	for(i=0;i<msg_size;i++)
 	{
-		msg[block] = msg[block]^key[block];
+		msg[i] = msg[i]^key[block];
 		block++;
 		if(block > 7)
 		{
